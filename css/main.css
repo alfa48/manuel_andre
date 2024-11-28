@@ -7,6 +7,13 @@
     text-decoration: none;
 }
 
+/**debagg*/
+.elemento {
+    border: 2px solid red; 
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -14,18 +21,34 @@
 }
 
 /*navbar styling*/
+
 .navbar{
     position: fixed;
-    padding: 15px 0;
-    background: crimson;
+    padding: 30px 0;
     width: 100%;
     font-family: Ubuntu, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    position: fixed;
+    padding: 30px 0;
+    background: crimson;
 }
 
 .navbar .logo a{
     color: #fff;
     font-size: 35px;
     font-weight: 600px;
+}
+
+.navbar .logo a span{
+    color: crimson;
+}
+
+.navbar.sticky .logo a span{
+    transition: all 0.3s ease;
+    color: #fff;
 }
 
 .navbar .max-width{
@@ -43,13 +66,24 @@
     color: #fff;
     font-size: 18px;
     font-weight: 500;
-    margin-left: 25px; 
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+    color: crimson;
+}
+
+.navbar.sticky .menu li a:hover{
+    transition: all 0.3s ease;
+    color: #fff;
 }
 
 /*home section styling*/
 .home{
     display: flex;
-    background: url("") no-repeat center;
+    background: url("/assets/imgs/background_o.png") no-repeat center;
+    background-color: darkslategrey;
     height: 100vh;
     color: #110d8a;
     min-height: 500xp;
@@ -62,4 +96,28 @@
 
 .home .home-content .text-1{
      font-size: 27px;
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 27px;
+}
+
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3;
+}
+
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span{
+    font-weight: 500;
+    color: crimson;
 }
